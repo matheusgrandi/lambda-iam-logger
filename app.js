@@ -7,10 +7,8 @@ export const handler = async (event, context) => {
   const data = (await zlib.gunzipAsync(payload)).toString('utf8');
   const jsonData = JSON.parse;
 
-  performWork(jsonData);
-
   try {
-    const result = await performWork(data);
+    const result = await performWork(jsonData);
     return {
       statusCode: 200,
       body: JSON.stringify(result),
