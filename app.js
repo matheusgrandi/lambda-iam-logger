@@ -5,7 +5,7 @@ const API_URL = 'http://api.com.br';
 export const handler = async (event, context) => {
   const payload = Buffer(event.awslogs.data, 'base64');
   const data = (await zlib.gunzipAsync(payload)).toString('utf8');
-  const jsonData = JSON.parse;
+  const jsonData = JSON.parse(data);
 
   try {
     const result = await performWork(jsonData);
