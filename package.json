@@ -1,0 +1,16 @@
+{
+  "name": "baires",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "description": "",
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "axios": "^0.27.2"
+  }
+}
